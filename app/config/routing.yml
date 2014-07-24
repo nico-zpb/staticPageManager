@@ -1,0 +1,8 @@
+admin_common_base:
+    resource: "@AdminCommonBaseBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin_common_static_page_manager:
+    resource: "@AdminCommonStaticPageManagerBundle/Resources/config/routing.yml"
+    prefix:   /
+

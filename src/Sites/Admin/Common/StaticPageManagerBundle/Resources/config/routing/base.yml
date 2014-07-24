@@ -1,0 +1,3 @@
+admin_common_static_page_manager_homepage:
+    path:     /
+    defaults: { _controller: AdminCommonStaticPageManagerBundle:Default:index }

@@ -1,0 +1,3 @@
+admin_common_static_page_manager_routes:
+    resource: "@AdminCommonStaticPageManagerBundle/Resources/config/routing/base.yml"
+    prefix:     /pages_statiques/gestion
