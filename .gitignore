@@ -11,3 +11,4 @@
 /.idea/
 /.sass-cache/
 /.config.rb
+/app/config/parameters.yml
