@@ -9,3 +9,5 @@
 /bin/
 /composer.phar
 /.idea/
+/.sass-cache/
+/.config.rb

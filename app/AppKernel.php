@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Sites\Admin\Common\StaticPageManagerBundle\AdminCommonStaticPageManagerBundle(),
             new Sites\Admin\Common\BaseBundle\AdminCommonBaseBundle(),
+            new Sites\Zoo\BaseBundle\ZooBaseBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
