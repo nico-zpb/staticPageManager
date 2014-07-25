@@ -2,9 +2,15 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Static Page</title>
+    <title>{{ page.title }}</title>
+
+    <meta name="description" content="{{ page.description }}"/>
+    <meta name="keywords" content="{{ page.keywords }}"/>
 
     {% block headLinks %}
+        {% if page.favicon != null %}
+            <link rel="icon" href="{{page.favicon}}" />
+        {% endif %}
         <link rel="stylesheet" href="/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="/css/master.css"/>
     {% endblock %}
@@ -13,6 +19,7 @@
 </head>
 <body>
     {% block main %}{% endblock %}
+
 
     {% block footScripts %}
         <script src="/js/vendor/jquery-2.1.1.min.js"></script>

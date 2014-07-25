@@ -27,7 +27,7 @@ class StaticPage implements Translatable
     /**
      * @var string
      * @Gedmo\Translatable
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 
@@ -49,6 +49,15 @@ class StaticPage implements Translatable
      */
     private $locale;
 
+    /**
+     * @ORM\Column(name="keywords", type="text", nullable=true)
+     */
+    private $keywords;
+
+    /**
+     * @ORM\Column(name="favicon", type="string", nullable=true)
+     */
+    private $favicon;
 
     /**
      * Get id
@@ -166,5 +175,51 @@ class StaticPage implements Translatable
     public function getFragments()
     {
         return $this->fragments;
+    }
+
+    /**
+     * Set keywords
+     *
+     * @param string $keywords
+     * @return StaticPage
+     */
+    public function setKeywords($keywords)
+    {
+        $this->keywords = $keywords;
+
+        return $this;
+    }
+
+    /**
+     * Get keywords
+     *
+     * @return string 
+     */
+    public function getKeywords()
+    {
+        return $this->keywords;
+    }
+
+    /**
+     * Set favicon
+     *
+     * @param string $favicon
+     * @return StaticPage
+     */
+    public function setFavicon($favicon)
+    {
+        $this->favicon = $favicon;
+
+        return $this;
+    }
+
+    /**
+     * Get favicon
+     *
+     * @return string 
+     */
+    public function getFavicon()
+    {
+        return $this->favicon;
     }
 }
